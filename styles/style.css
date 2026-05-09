@@ -5,29 +5,17 @@
   font-family: sans-serif;
 }
 body {
-  background-color: #4e6e81;
-  word-break: break-word;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  /* Ensure the body takes up at least the full height of the screen */
   min-height: 100vh;
-  margin: 0;
+  background-color: #4e6e81;
 }
 
 main {
-  /* This tells the main section to grow and take up all empty space */
   flex: 1;
   padding-top: 8%;
   padding-bottom: 10%;
-}
-
-.footer {
-  /* This ensures the footer stays at the end of the flex column */
-  margin-top: auto;
-  width: 100%;
-  background-color: #4e6e81;
-  padding: 40px 0;
-  padding-left: 5%;
 }
 
 /*navbar-section*/
@@ -359,8 +347,92 @@ li.nav-item:hover {
 .home-article p {
   color: white;
 }
+/*PRODUCTS PAGE*/
+.products-body {
+  background-color: #4e6e81;
+}
+
+.main-page-products {
+  background-color: transparent;
+  flex: 1;
+}
+
+.product-cards-container {
+  background-color: transparent;
+  height: 75%;
+  width: 75%;
+  margin: 75px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 25px;
+  padding: 20px;
+}
+
+.product-cards-container .card {
+  outline: 1px solid #f9dbbb3f;
+  color: white;
+  box-shadow: -10px 0px 50px 9px #2e3840;
+}
+
+.image-section {
+  min-height: 250px;
+}
+
+.card .img-styling {
+  /* background-image: url("Images/HomeImageBorderlands.webp");*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.card .content {
+  text-align: center;
+  padding: 20px 15px;
+}
+
+.card .content h2 {
+  letter-spacing: 2px;
+}
+
+.card .content p {
+  font-size: 16px;
+  color: #f3f8fb;
+  margin: 15px 0px;
+  overflow-wrap: break-word;
+  word-break: break-all;
+}
+.card .content h3 {
+  color: #f9dbbb;
+  padding: 2px;
+}
+
+.card .content a {
+  font-family: sans-serif;
+  text-decoration: none;
+  font-size: 16px;
+  color: #222;
+  letter-spacing: 2px;
+  display: inline-block;
+  background-color: #2e3840;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.card .content a:hover {
+  background-color: #ff0303;
+  box-shadow: 3px 3px #2e3840;
+}
 
 /*footer*/
+
+.footer {
+  margin-top: auto;
+  width: 100%;
+  background-color: #4e6e81;
+  padding: 40px 0;
+  padding-left: 5%;
+}
 
 .footer .footer-page-list {
   margin-top: 0;
