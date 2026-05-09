@@ -424,6 +424,60 @@ li.nav-item:hover {
   box-shadow: 3px 3px #2e3840;
 }
 
+/**CONTACT US PAGE**/
+
+.contact-us-section {
+  height: 100vh;
+  padding: 50px;
+  text-align: center;
+  color: white;
+}
+
+.contact-us-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-us-container h2 {
+  font-size: 50px;
+  margin-bottom: 30px;
+  color: #2e3840;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid grey;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.48);
+  color: grey;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  height: 120px;
+}
+
+.contact-form button {
+  font-size: 16px;
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #4e6e81;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3 ease;
+  color: white;
+}
+
+.contact-form button:hover {
+  background-color: #ff0303;
+  box-shadow: 3px 3px #2e3840;
+}
+
+/*------------------*/
 /*footer*/
 
 .footer {
