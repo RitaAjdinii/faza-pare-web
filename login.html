@@ -34,10 +34,11 @@
               Tekk ID is a unified account for all TEKK devices
             </p>
           </div>
-          <form >
+          <form onsubmit="event.preventDefault(); validateForm();">
+            <p id="usernameError" class="error-msg"></p>
             <input
-              type="text"
-              placeholder="TECH ID (your name)"
+              type="text" 
+              placeholder="TECH ID (your name)" id="username-input"
             />
             <select class="form-btns">
               <option value="">Location</option>
@@ -58,14 +59,16 @@
               <option value="Austria">Austria</option>
             </select>
             <input class="input-container" type="date"  />
-            <input type="text" placeholder="EMAIL ADDRESS" />
-            <input type="password" placeholder="PASSWORD" />
+            <p id="emailError" class="error-msg"></p>
+            <input type="text" placeholder="EMAIL ADDRESS"  id="email-input"/>
+            <p id="passwordError" class="error-msg"></p>
+            <input type="password" placeholder="PASSWORD" id="password-input"/>
             <div class="isadmin">
               <label for="" id="admin">Is Administrator</label>
               <input type="checkbox" id="admin-check"/>
             </div>
 
-            <button type="submit"  class="form-btns ">Sign in</button>
+            <button type="submit"  class="form-btns">Sign in</button>
             <button type="button" class="form-btns toggle">Already have an account?</button>
           </form>
         </div>
@@ -90,5 +93,6 @@
         });
       });
     </script>
+    <script src="validation.js"></script>
   </body>
 </html>
