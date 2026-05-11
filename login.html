@@ -14,8 +14,10 @@
         <div class="login-container">
           <h3>LOGIN</h3>
           <form>
-            <input type="text"  placeholder="EMAIL " /><br>
-            <input type="password"  placeholder="PASSWORD" />
+            <input type="text"  placeholder="EMAIL " id="login-email"/><br>
+            <p id="loginEmailError" class="error-msg"></p>
+            <input type="password"  placeholder="PASSWORD"  id="login-password"/>
+            <p id="loginPasswordError" class="error-msg"></p>
             <p id="forgor"><a href="">Forgot Password?</a></p>
             <button id="login-btn" type="submit"  class="form-btns">LOG IN</button>
             <p id="acc"><a>Don't have an account yet?</a></p>
@@ -92,6 +94,9 @@
           }
         });
       });
+
+
+    
     </script>
     <script src="validation.js"></script>
   </body>

@@ -1,7 +1,3 @@
-// const usernameRe = /^[a-zA-Z0-9._-]{3,20}$/;
-// const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-// const passwordRe = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
-
 const signupForm = document.querySelector(".signup-container form");
 const emailInput = document.querySelector("#email-input");
 const usernameInput = document.querySelector("#username-input");
@@ -55,3 +51,39 @@ const validateForm = () => {
     signupForm.submit();
   }
 };
+
+const loginForm = document.querySelector(".login-container form");
+const loginEmailInput = document.querySelector("#login-email");
+const loginPasswordInput = document.querySelector("#login-password");
+const loginEmailError = document.getElementById("loginEmailError");
+const loginPasswordError = document.getElementById("loginPasswordError");
+
+const validateLogin = (event) => {
+  event.preventDefault();
+  loginEmailError.innerText = "";
+  loginPasswordError.innerText = "";
+
+  let loginIsGood = true;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  if (loginEmailInput.value.trim() === "") {
+    loginEmailError.innerText = "Please enter your email.";
+    loginIsGood = false;
+  } else if (!emailRegex.test(loginEmailInput.value)) {
+    loginEmailError.innerText = "Please enter a valid email address.";
+    loginIsGood = false;
+  }
+
+  if (loginPasswordInput.value.trim() === "") {
+    loginPasswordError.innerText = "Please enter your password.";
+    loginIsGood = false;
+  }
+
+  if (loginIsGood) {
+    console.log("Login details are valid, sending to server...");
+    // loginForm.submit() backend check.
+    alert("Login Successful!");
+  }
+};
+
+loginForm.addEventListener("submit", validateLogin);
